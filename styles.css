@@ -1,0 +1,345 @@
+/* Estilos globales */
+body {
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #f5f5dc;
+    color: #4b3b30;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+
+header {
+    background-color: #8b6b4a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #c5a880;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: #4b3b30;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+}
+
+footer {
+    background-color: #8b6b4a;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+h2 {
+    color: #8b6b4a;
+}
+
+.section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.projects, .skills, .testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project, .skill, .testimonial {
+    background-color: #e7d7c1;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    flex-basis: 30%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #8b6b4a;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+}
+
+/* Animación hover para el botón */
+#back-to-top:hover {
+    background-color: #6b4a2a;
+}
+
+nav a {
+    color: #4b3b30;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #6b4a2a; /* Cambiar color en hover */
+    transform: scale(1.1); /* Pequeño agrandamiento */
+}
+
+.section-container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#contact-button {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: #6b4a2a;
+    color: white;
+    padding: 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+#contact-button:hover {
+    background-color: #8b6b4a;
+}
+
+.project, .skill, .testimonial {
+    background-color: #e7d7c1;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    flex-basis: 30%;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra más marcada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover, .skill:hover, .testimonial:hover {
+    transform: translateY(-10px); /* Efecto 3D al elevarse */
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skill {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna (imagen, título, descripción) */
+    align-items: center; /* Centra la imagen, el título y la descripción */
+    text-align: center;  /* Alinea el texto en el centro */
+    background-color: #e7d7c1;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 8px;
+    flex-basis: 30%;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill img {
+    width: 70px; /* Aumenta ligeramente el tamaño de los logos */
+    height: auto;
+    margin-bottom: 10px; /* Añade espacio entre la imagen y el título */
+}
+
+.skill h3 {
+    margin: 10px 0; /* Añade espacio entre el título y la descripción */
+    font-size: 1.2em;
+}
+
+.skill p {
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+.skill:hover {
+    transform: translateY(-10px);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos del formulario de recomendación */
+fieldset {
+    border: 2px solid #ccbba1;
+    padding: 20px;
+    background-color: #f4ece2;
+    border-radius: 10px;
+}
+
+.introduction {
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 15px;
+    color: #5a4632;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccbba1;
+    font-family: 'Roboto', sans-serif;
+}
+
+#recommend_btn {
+    padding: 10px 20px;
+    background-color: #8c6e4a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#recommend_btn:hover {
+    background-color: #5a4632;
+}
+
+/* Estilos del Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el popup */
+    width: 450px; /* Tamaño fijo para el popup */
+    background-color: #8c6e4a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Centra el contenido */
+}
+
+.popup img {
+    width: 100px; /* Imagen más grande */
+    height: auto;
+    margin-bottom: 30px; /* Espacio entre la imagen y el mensaje */
+}
+
+.popup h3 {
+    color: white;
+    margin-bottom: 20px; /* Espacio debajo del mensaje */
+    font-size: 1.2em;
+}
+
+.popup button {
+    padding: 10px 20px;
+    background-color: #e7d7c1;
+    color: #8c6e4a;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #ccbba1;
+}
+
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar la animación a las secciones al hacer scroll */
+.section-container {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+:root {
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --primary-color: #8c6e4a;
+}
+
+[data-theme="dark"] {
+    --background-color: #333;
+    --text-color: #f5f5f5;
+    --primary-color: #d3a47e;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f7f3ec;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#contact-form input, #contact-form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form button {
+    padding: 10px;
+    background-color: #8c6e4a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #6f5235;
+}
